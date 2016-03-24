@@ -1,0 +1,33 @@
+{
+  "name": "Yaaw-Electron",
+  "version": "1.0.0",
+  "description": "A application use Yaaw wrap by electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "mac-bundle": "electron-packager . Yaaw-Electron --overwrite --platform=darwin --arch=x64 --ignore=node_modules/electron-prebuilt && cp info.plist Yaaw-Electron-darwin-x64/Yaaw-Electron.app/Contents/Info.plist && cp icon.icns Yaaw-Electron-darwin-x64/Yaaw-Electron.app/Contents/Resources/atom.icns",
+    "win-bundle": "electron-packager . Yaaw-Electron --overwrite --platform=win32 --arch=ia32  --icon=icon.ico",
+    "linux-64-bundle": "electron-packager . Yaaw-Electron --overwrite --platform=linux --arch=x64 ignore='node_modules/(electron-packager|electron-prebuilt)'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkanako/Yaaw-Electron.git"
+  },
+  "keywords": [
+    "Electron",
+    "Yaaw"
+  ],
+  "author": "mkanako",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mkanako/Yaaw-Electron/issues"
+  },
+  "homepage": "https://github.com/mkanako/Yaaw-Electron#readme",
+  "devDependencies": {
+    "electron-packager": "^5.2.1",
+    "electron-prebuilt": "^0.36.0"
+  },
+  "dependencies": {
+    "aria2": "^1.2.0"
+  }
+}
